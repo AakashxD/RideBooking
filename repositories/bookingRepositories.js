@@ -1,7 +1,7 @@
 const Booking =require('../models/booking');
 
-const findBooking=async({bookingId,passengerId})=>{
-   const booking=await Booking.findById({_id:bookingId});
+const findBooking=async(criteria)=>{
+   const booking=await Booking.findOne(criteria);
    return booking;
 }
 
