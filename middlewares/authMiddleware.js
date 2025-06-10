@@ -1,6 +1,6 @@
 const jwt=require('jsonwebtoken');
 const User=require('../models/user');
-
+const dotenv=require("dotenv").config();
 const authMiddleware=async(req,res,next)=>{
     // get token from header in the request
     const token=req.header('Authorization')?.replace('Bearer','');

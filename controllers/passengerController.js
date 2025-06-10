@@ -10,7 +10,7 @@ const getPassengerBooking=async(req,res)=>{
         res.status(401).send({success:false,message:"Error"});
      }
 }
-const providerFeedback=async(req,res)=>{
+const provideFeedback=async(req,res)=>{
     try {
          const {rating,feedback,bookingId,passengerId}=req.user
      const provideFeedBack= await passengerService.provideFeedback(passengerId,bookingId,rating,feedback);
@@ -23,5 +23,5 @@ const providerFeedback=async(req,res)=>{
 
 }
 module.exports={
-    getPassengerDetails,providerFeedback
+    getPassengerBooking,provideFeedback
 }
