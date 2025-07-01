@@ -1,6 +1,4 @@
 const authService=require('../services/authService.js');
-
-
 const register=async(req,res)=>{
       try {
         const {user,token}=await authService.register(req.body);
